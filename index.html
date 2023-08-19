@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css"
+    />
+    <title>Login & Register</title>
+  </head>
+  <body>
+    <header
+      class="d-flex justify-content-center align-items-center flex-column text-white text-center"
+    >
+      <div class="signup d-flex flex-column p-3">
+        <h1 class="text-capitalize fw-bold mb-5 mt-2">register now</h1>
+        <form>
+          <input
+            type="text"
+            placeholder="Enter username"
+            class="form-control my-3"
+            id="signUpUserName"
+          />
+          <div class="invalid-feedback d-none" id="userNameRegWarning">
+            name must be at least 3 chars
+          </div>
+          <input
+            type="email"
+            placeholder="Enter Email"
+            class="form-control my-3"
+            id="signUpEmail"
+          />
+          <input
+            type="password"
+            placeholder="Enter password"
+            class="form-control my-3"
+            id="signUpPassword"
+          />
+          <div class="last">
+            <span class="text-decoration-underline m-2"
+              >have an account? go to login</span
+            >
+            <button type="button" class="btn btn-primary my-2 register">
+              Register
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="signin d-none flex-column p-3">
+        <h1 class="text-capitalize fw-bold mb-5 mt-2">Login now</h1>
+        <form>
+          <input
+            type="email"
+            placeholder="Enter Email"
+            class="form-control my-3"
+            id="loginEmail"
+          />
+          <input
+            type="password"
+            placeholder="Enter password"
+            class="form-control my-3"
+            id="loginPassword"
+          />
+          <div class="last justify-content-center align-items-center">
+            <span class="text-decoration-underline m-2"
+              >don't have an account? go to register</span
+            >
+            <button type="button" class="btn btn-primary my-2 login">
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="home d-none d-flex justify-content-center align-items-center">
+        <h1 class="p-3 fw-bold text-info text-capitalize"></h1>
+      </div>
+    </header>
+
+    <div class="logout p-3 d-none justify-content-end fixed-top">
+      <button class="btn-warning text-white fw-bold btn">logout</button>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
