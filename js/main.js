@@ -163,10 +163,7 @@ spanGoToLRegister.addEventListener("click", function () {
 });
 
 logout.addEventListener("click", function () {
-  document.querySelector(".signup").classList.replace("d-flex", "d-none");
-  document.querySelector(".signin").classList.replace("d-none", "d-flex");
-  document.querySelector(".home").classList.replace("d-flex", "d-none");
-  document.querySelector(".logout").classList.replace("d-flex", "d-none");
+  showLogin();
   clear();
   swal("You Loged Out!", "Good Bye!", "success");
 });
@@ -194,10 +191,7 @@ function checkForLogin() {
       users[i].password == loginPassword.value
     ) {
       localStorage.setItem("name", JSON.stringify(users[i].name));
-      document.querySelector(".signup").classList.replace("d-flex", "d-none");
-      document.querySelector(".signin").classList.replace("d-flex", "d-none");
-      document.querySelector(".home").classList.replace("d-none", "d-flex");
-      document.querySelector(".logout").classList.replace("d-none", "d-flex");
+      showHome();
       document.querySelector(
         ".home h1"
       ).innerHTML = `welcome ${users[i].username}`;
@@ -221,4 +215,26 @@ function clear() {
   signUpPassword.value = ``;
   loginEmail.value = ``;
   loginPassword.value = ``;
+}
+
+// move between pages
+function showLogin() {
+  document.querySelector(".signup").classList.replace("d-flex", "d-none");
+  document.querySelector(".signin").classList.replace("d-none", "d-flex");
+  document.querySelector(".home").classList.replace("d-flex", "d-none");
+  document.querySelector(".logout").classList.replace("d-flex", "d-none");
+}
+
+function showSignUp() {
+  document.querySelector(".signup").classList.replace("d-none", "d-flex");
+  document.querySelector(".signin").classList.replace("d-flex", "d-none");
+  document.querySelector(".home").classList.replace("d-flex", "d-none");
+  document.querySelector(".logout").classList.replace("d-flex", "d-none");
+}
+
+function showHome() {
+  document.querySelector(".signup").classList.replace("d-flex", "d-none");
+  document.querySelector(".signin").classList.replace("d-flex", "d-none");
+  document.querySelector(".home").classList.replace("d-none", "d-flex");
+  document.querySelector(".logout").classList.replace("d-none", "d-flex");
 }

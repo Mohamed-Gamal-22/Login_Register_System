@@ -1,5 +1,6 @@
 header {
-  background-image: url(../img/pexels-eberhard-grossgasteiger-1421903.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../img/modern-office-desk-composition-with-technological-device.jpg);
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -35,7 +36,7 @@ header {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(4px);
   /* border: 1px solid #f1f1f1; */
   padding: 15px !important;
   box-shadow: 1px 1px 5px #333, -1px -1px 5px #f1f1f1;
